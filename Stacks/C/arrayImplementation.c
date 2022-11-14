@@ -51,12 +51,7 @@ void push()
         top++;
     student_Id[top] = val;
     }
-    printf("Elements in array: \n");
-    for(int i = 0; i <= n; i++)
-    {
-        printf("%d\n",student_Id[i]);
-    }
-      printf("Do you want to insert another element?:\n 1: Yes\n 2: Main Menu");
+        printf("Do you want to insert another element?:\n 1: Yes\n 2: Main Menu");
       scanf("%d", &option);
       switch(option)
             {
@@ -70,11 +65,12 @@ void push()
 
 
 
-int  pop(int val)
+int  pop()
 {
     if(isEmpty())
     {
         printf("The Stack is Empty");
+        main();
         return 0;
     }
     else
@@ -93,20 +89,28 @@ int count()
 }
 
 
-int peek(int pos)
+int peek()
 {
+    printf("Enter Position to access:\n");
+    scanf("%d", &pos);
     if(isEmpty())
     {
-        printf("The Stack is Empty");
+        printf("The Stack is Empty\n Returning to main menu.....\n");
+        main();
     }
     else
     {
+        printf("%d",student_Id[pos]);
         return student_Id[pos];
     }
 }
 
-void change(int pos, int val)
+void change()
 {
+    printf("Enter Position to Change:\n");
+    scanf("%d", &pos);
+    printf("Enter Value to Insert:\n");
+    scanf("%d", &pos);
     student_Id[pos]  = val;
     printf("Value changed at location: %d", pos);
 
@@ -118,35 +122,39 @@ void display()
     printf("Elements in stack are: \n");
     for (int i= 10; i>=0; i--)
     {
-        printf("Array items are: %d",student_Id[i]);
+        printf("%d \n",student_Id[i]);
     }
+    main();
 }
 
 
 int main()
 {
-    arrayDecl(student_Id);
-
-
-          printf("Which Operation do you want to perform?:\n 1: Insert\n 2: Remove\n 3: Change\n 4: Count\n");
+     printf("Which Operation do you want to perform?:\n 1: Insert\n 2: Remove\n 3: Change\n 4: Count\n 5: Peek \n 6: Display \n");
       scanf("%d", &option);
       switch(option)
             {
         case 1:
             push();
+            break;
         case 2:
             pop();
+            break;
         case 3:
             change;
+                break;
         case 4:
             count();
+                break;
         case 5:
             peek();
+                break;
+        case 6:
+            display();
+            break;
         default:
-            printf("Which Operation do you want to perform?:\n 1: Insert\n 2: Remove\n 3: Change\n 4: Count\n 5: Peek \n");
+            printf("Which Operation do you want to perform?:\n 1: Insert\n 2: Remove\n 3: Change\n 4: Count\n 5: Peek\n 6: Display \n");
     }
-
-    push();
 
 
 
