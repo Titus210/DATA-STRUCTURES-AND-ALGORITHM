@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <stdio.h>
 #include <stdbool.h>
 
 // Global Variables
 
 int top = -1;
-int n = 10, i= 0, val = 0;
+int n = 10, i, val,option = 0;
 int student_Id[];
 int pos;
 
@@ -33,25 +32,48 @@ bool isEmpty()
 
 bool isFull()
 {
-    if (top == n-1)
+    if (top == n)
         return true;
     else
         return false;
 }
 
-void push(int val)
+void push()
 {
-    if(isFull())
-        printf("The Stack is full");
-    else
+    printf("Enter Value You Want to insert");
+    scanf("%d",&val);
+
+    if(isFull()){
+        printf("The Stack is full\n");
+        main();
+    }
+    else{
         top++;
     student_Id[top] = val;
+    }
+    printf("Elements in array: \n");
+    for(int i = 0; i <= n; i++)
+    {
+        printf("%d\n",student_Id[i]);
+    }
+      printf("Do you want to insert another element?:\n 1: Yes\n 2: Main Menu");
+      scanf("%d", &option);
+      switch(option)
+            {
+        case 1:
+            push();
+        case 2:
+            main();
+    }
+
 }
+
 
 
 int  pop(int val)
 {
-    if(isEmpty()){
+    if(isEmpty())
+    {
         printf("The Stack is Empty");
         return 0;
     }
@@ -69,6 +91,7 @@ int count()
 
     return (top + 1);
 }
+
 
 int peek(int pos)
 {
@@ -89,6 +112,7 @@ void change(int pos, int val)
 
 }
 
+
 void display()
 {
     printf("Elements in stack are: \n");
@@ -99,16 +123,10 @@ void display()
 }
 
 
-
-
-
 int main()
 {
     arrayDecl(student_Id);
-
-    printf("Enter Value You Want to insert");
-    scanf("%d",val);
-    push(val);
+    push();
 
 
 
