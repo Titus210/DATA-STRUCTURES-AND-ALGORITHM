@@ -35,7 +35,7 @@ Stacks re bounded i.e they have predefined capacity.
     stop:
 ```
 
-2. __pop()__: <br>
+2.  __pop()__: <br>
 This is operation when an element is removed from stack <br>
 The basic steps is as follows:
 
@@ -57,3 +57,76 @@ The basic steps is as follows:
 
     stop:
 ```
+3. __isEmpty()__: <br>
+Checks if the stack is empty
+
+### __Algorithm__: <br>
+
+ ```
+    start:
+        if top equal -1
+            return true
+        else
+        return false   
+    stop:
+```
+4. __isFull()__: <br>
+Checks if the stack is full
+
+### __Algorithm__: <br>
+
+ ```
+    start:
+        if top equal max size
+            return true
+        else
+        return false   
+    stop:
+```
+
+5. __Peek()__: <br>
+Access Element at a given position
+
+### __Algorithm__: <br>
+
+ ```
+    start:
+        input position to access
+            return element at position
+    stop:
+```
+6. __Count()__: <br>
+Access Element at a given position
+
+### __Algorithm__: <br>
+
+ ```
+    start:
+    declare count to 0;
+        loop through elements
+        increment count on each loop
+    stop:
+```
+7. __Top()__: <br>
+Return last element without removing
+
+### __Algorithm__: <br>
+
+ ```
+    start:
+        return stack[top]
+    stop:
+```
+8. __Change__: <br>
+Change An element of stack at a given position
+
+### __Algorithm__: <br>
+
+ ```
+    start:
+        input value to change
+        input position to change
+        return stack[pos] = value
+    stop:
+```
+
