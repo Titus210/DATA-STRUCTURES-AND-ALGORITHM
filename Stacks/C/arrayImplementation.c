@@ -126,6 +126,26 @@ void display()
 int main()
 {
     arrayDecl(student_Id);
+
+
+          printf("Which Operation do you want to perform?:\n 1: Insert\n 2: Remove\n 3: Change\n 4: Count\n");
+      scanf("%d", &option);
+      switch(option)
+            {
+        case 1:
+            push();
+        case 2:
+            pop();
+        case 3:
+            change;
+        case 4:
+            count();
+        case 5:
+            peek();
+        default:
+            printf("Which Operation do you want to perform?:\n 1: Insert\n 2: Remove\n 3: Change\n 4: Count\n 5: Peek \n");
+    }
+
     push();
 
 
