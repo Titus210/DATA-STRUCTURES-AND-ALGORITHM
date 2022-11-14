@@ -7,3 +7,25 @@ The patters is implemented in most of our worldy problems i.e. <br>
 -       Cards
 -       Stack Of Books
 -       Bullets in magazene
+
+Stacks re bounded i.e they have predefined capacity.
+ Stack have one __entry__ and __exit__ point which is __top__.
+
+ ##         Operations
+ 1. __push()__: <br>
+ This is an operation when an element is inserted into the stack. <br>
+ The basic operation is as follows:
+ -       Check if stack is full: __stackoverflow__ occurs if true
+ -       Insert element on top of stack:
+  ###   __Algorithm__: <br>
+ ``` 
+    start:
+        is stack full():
+            if stack full then stack overflow
+            else:
+            increment top:
+            insert element on top of stack
+    stop:
+```
+
+    
