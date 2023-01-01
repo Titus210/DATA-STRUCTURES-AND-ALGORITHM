@@ -8,3 +8,8 @@ using namespace std
  int isFull(int arr){
     if top == MAX
       return 1;
+  else
+     return 0
+  }
+
+
