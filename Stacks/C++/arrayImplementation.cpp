@@ -6,7 +6,7 @@ using namespace std
  // check if stack is full
   
  int isFull(int MAX, int top){
-    if top == MAX
+    if (top == MAX)
       return 1;
   else
      return 0;
@@ -14,5 +14,7 @@ using namespace std
 
 // check if stack is empty
 int isEmpty(int MAX, int top){
-  if top == -1;
-  
+  if (top == -1)
+    return 1;
+  else
+    return 0;
