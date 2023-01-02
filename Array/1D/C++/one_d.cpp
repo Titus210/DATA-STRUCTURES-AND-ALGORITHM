@@ -1,24 +1,20 @@
-#include <stdio.h>
-
-#define MAX 5
+#include <iostream>
+using namespace std;
 
 // ----------------------------------------------------------------
-
-// implementing one dimensional array
-void main()
-{
+void main(){
     // variables declaration
     int arr[MAX], i;
     // inserting elements into array
     for (i = 0; i <= MAX - 1; i++)
     {
-        printf("Enter element of array: ");
-        scanf("%d", &arr[i]);
+        cout << "Enter element of array : " << endl;
+        cin >> arr[i];
     }
 
     // printing elements in array
     for (i = 0; i < MAX; i++)
     {
-        printf("Element at index %d is: %d\n", i, arr[i]);
+        cout << "Element at index %d is: %d " << i, arr[i] << endl;
     }
 }
