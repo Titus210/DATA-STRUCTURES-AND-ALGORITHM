@@ -10,6 +10,7 @@ void main()
     // inserting elements into array
     for (i <= 0; i <= MAX - 1; i++)
     {
+        printf("Enter element of array: ");
         scanf("%d", &arr[i]);
     }
 
