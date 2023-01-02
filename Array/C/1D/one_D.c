@@ -16,6 +16,6 @@ void main()
     // printing elements in array
     for (i = 0; i < MAX; i++)
     {
-        printf("Element at index %d is: %d\n", i, arr[i])
+        printf("Element at index %d is: %d\n", i, arr[i]);
     }
 }
