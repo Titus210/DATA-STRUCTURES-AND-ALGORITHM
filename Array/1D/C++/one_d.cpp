@@ -18,7 +18,7 @@ int main(){
     // printing elements in array
     for (i = 0; i < MAX; i++)
     {
-        cout << "Element at index" << i << "is"  <<  arr[i] << endl;
+        cout << "Element at index" << i << "is: "  <<  arr[i] << endl;
     }
 
     return 0;
