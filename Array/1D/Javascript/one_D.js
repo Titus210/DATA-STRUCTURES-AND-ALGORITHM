@@ -3,6 +3,6 @@
 var array = [];
 
 
-noOfElements = Number(prompt("Please Enter no of elements in array"));
+noOfElements = prompt("Please Enter no of elements in array");
 
 console.log(noOfElements)
