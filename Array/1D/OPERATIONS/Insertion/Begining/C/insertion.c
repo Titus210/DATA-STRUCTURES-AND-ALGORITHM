@@ -5,7 +5,7 @@
 void main()
 {
     // initialize array, position, i
-    int array[MAX] = {1, 2, 3, 4, 5}, element;
+    int array[MAX] = {1666666, 2, 3, 4, 5}, element;
     int i = 0;
     int pos = 0; // since beginning is index 0
 
