@@ -26,6 +26,6 @@ void main()
 
     for (i = 0; i <= MAX; i++)
     {
-        printf("%d", array[i]);
+        printf("%d \n", array[i]);
     }
 }
