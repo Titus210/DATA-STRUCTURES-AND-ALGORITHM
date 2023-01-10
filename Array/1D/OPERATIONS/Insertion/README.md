@@ -33,7 +33,7 @@ Insertion at the beginning is performed when we set element position to `0`
 
     array[position] = element;
 ```
-1. Given Position
+2. Given Position
    Insertion at the beginning is performed when we set element position to `0`
 ```
     // ask user position to insert    
@@ -41,5 +41,5 @@ Insertion at the beginning is performed when we set element position to `0`
     // insert element at the given position inserted by user, position is the `array index + 1`  
     array[position + 1] = element;
 ```
-1. Insertion at the end of Array: <br/>
+3. Insertion at the end of Array: <br/>
 Normal insertion of an element occurs at the end of ann array. <br/>
