@@ -1,6 +1,7 @@
 # Insertion
 One of the common operation of array is `insertion`. <br/>
 Insertion is performed when position to be inserted is `less than ` the maximum array capacity <br/>
+***
 
 ## Algorithm to insert elements
 __Insertion__ of element at given position in an array
