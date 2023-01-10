@@ -22,7 +22,7 @@ int main()
         return -1;
     }
 
-    // shift elements to make room for neq
+    // shift elements to make room for new
     for (i = MAX - 1; i > pos; i--)
     {
         students[i] = students[i - 1];
