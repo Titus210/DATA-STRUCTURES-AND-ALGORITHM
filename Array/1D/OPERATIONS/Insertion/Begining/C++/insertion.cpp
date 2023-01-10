@@ -23,7 +23,7 @@ int main()
         // print array
         for (i = 0; i < MAX; i++)
         {
-            cout << "Student at index: " << i < < < < students[i] << endl;
+            cout << "Student at index: " << i << "is: " << students[i] << endl;
         }
     }
 }
