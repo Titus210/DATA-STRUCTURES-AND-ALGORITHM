@@ -16,9 +16,9 @@ __Insertion__ of element at given position in an array
 3. Begin
 
 4. `for i = n - 1 to p` step -1
-    - `A[i + 1] = A[i]` # shift elements to right
+    - `A[i + 1] = A[i]`     # shift elements to right
 
-5. `A[p]` = x  # insert element x to position p
+5. `A[p]` = x    # insert element x to position p
 
 6.  End
 
