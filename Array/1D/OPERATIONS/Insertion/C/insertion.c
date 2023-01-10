@@ -37,6 +37,7 @@ int main()
         printf("Student at index %d is %d\n", i, students[i]);
 
         return 0;
+        
     }
 
 }
