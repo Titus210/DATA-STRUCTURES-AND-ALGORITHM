@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAX 10;
+#define MAX 10
 
 int main()
 {
@@ -32,12 +32,9 @@ int main()
     students[pos] = element;
 
     // print array of students
-    for (i = 0; i < MAX; i++)
-    {
+    for (i = 0; i <= MAX; i++)
         printf("Student at index %d is %d\n", i, students[i]);
 
         return 0;
-        
-    }
 
 }
