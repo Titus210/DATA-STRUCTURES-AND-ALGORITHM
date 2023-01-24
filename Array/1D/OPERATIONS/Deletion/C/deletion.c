@@ -4,10 +4,12 @@
 int main(){
 	int array[MAX];
 	int pos, i;
+	int j = 0;
 
 	// initialize array with 0
 	for( i = 0; i <= MAX; i++){
-		array[i] = 0;
+		array[i] = j;
+		j++;
 	}
 
 	// print array before deletion
@@ -20,13 +22,23 @@ int main(){
 	printf("\nEnter Position to delete");
 	scanf("%d",&pos);
 	// Check position of Array
-	// if pos > 0 and pos < array size
+	if ( pos < 0 || pos >= MAX)
+	{
+		printf("Invalid Position");
+			return -1;
+	}
 
 	// Loop Through array and Increment
+	for(i = pos; i < MAX + 1; i++){
+		array[i] = array[i + 1];
+	}
 
-	// shift Each element to left 
+	// print array after insertion
+	printf("The array after insertio  is: \n");
+	for(i = 0; i <= MAX; i++){
+		printf("\nArray at index %d is %d", i, array[i]);
+	}
 
-	// print array after
 	return 0;
 
 }
