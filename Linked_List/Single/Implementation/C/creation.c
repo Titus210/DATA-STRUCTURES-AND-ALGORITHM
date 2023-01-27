@@ -1,22 +1,48 @@
 #include <stdio.h>
+#include <string.h>
 
-struct singly{
+struct node
+{
 	int data;
-	struct singly *next;
+	struct node *next;
 };
 
-int node* getNode(){
-	node* newNode;
-	newNode = (node*)malloc(sizeof(node));
+void main()
+{
+	// pointer of head to store first node
+	int choice, i = 1;
+	struct node *head, *newNode, *temp;
+	head = NULL;
 
-	printf("Enter data to store: ");
-	scanf("%d",&newNode -> data);
+	while (choice)
+	{
+		// allocate memory for node
+		newNode = (struct node *)malloc(sizeof(struct node));
 
-	newNode -> next = NULL;
-	return newNode;
-}
+		// user for data
+		printf("Enter data to insert: ");
+		scanf("%d", &newNode->data);
 
-int main(){
-	print("%d",getNode());
-	return 0;
+		newNode->next = NULL;
+		if (head == NULL)
+			head = temp = newNode;
+		else
+		{
+			temp->next = newNode;
+			temp = newNode;
+		}
+
+		// continue to create another node
+		printf("Do you want to insert another node: ");
+		scanf("%d", &choice);
+	}
+
+	// Traverse List
+	temp = head;
+	while (temp != NULL)
+	{
+		printf("The value of node %d is: %d",i, temp->data);
+		temp = temp->next;
+	}
+	getchar();
 }
