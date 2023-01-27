@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 struct node
@@ -17,7 +18,7 @@ void main()
 	while (choice)
 	{
 		// allocate memory for node
-		newNode = (struct node *)malloc(sizeof(struct node));
+		newNode = (struct node*)malloc(sizeof(struct node));
 
 		// user for data
 		printf("Enter data to insert: ");
@@ -33,7 +34,7 @@ void main()
 		}
 
 		// continue to create another node
-		printf("Do you want to insert another node: ");
+		printf("\nDo you want to insert another node: ");
 		scanf("%d", &choice);
 	}
 
@@ -41,8 +42,9 @@ void main()
 	temp = head;
 	while (temp != NULL)
 	{
-		printf("The value of node %d is: %d",i, temp->data);
+		printf("\nThe value of node %d is: %d",i, temp->data);
 		temp = temp->next;
+		i++;
 	}
 	getchar();
 }
