@@ -28,3 +28,23 @@ Representation of particular D.S id called __storage structure__.
 Data structure should be represented in a way utilize maximum efficiency. <br/>
 Storage structure represented in auxillary memory is called __file structure__ <br/>
 
+To solve real life problem, we define the problem, then design the algorithm.
+
+### Stepwise Refinement
+This is when problem is refined(converted) stepwise to a program.
+
+Approaches to algorithm design
+1. Top-Down
+2. Bottom-Up
+
+### Stepwise Refinement technique
+This is technique used in algorithm and data structure to design and develop a solution incerementally by breaking down problem to small sub problems and solving eah separated then building final solution gradually 
+through series of intermediate stages.
+#### Benefits
+- Makes solution development problem manageable by dividing, conquer and combine.
+- Makes solution understandable
+- Makes easier to debug and refine solution as each stage is tested.
+- Minimizes error and oversites as solution is developed incrementally.
+
+### Modular Programming
+This is procedual way of programming that focuses on writting code as functions. It involves breaking down 
