@@ -38,7 +38,7 @@ Approaches to algorithm design
 2. Bottom-Up
 
 ### Stepwise Refinement technique
-This is technique used in algorithm and data structure to design and develop a solution incerementally by breaking down problem to small sub problems and solving eah separated then building final solution gradually 
+This is technique used in algorithm and data structure to design and develop a solution incrementally by breaking down problem to small sub problems and solving eah separated then building final solution gradually 
 through series of intermediate stages.
 #### Benefits
 - Makes solution development problem manageable by dividing, conquer and combine.
@@ -47,4 +47,5 @@ through series of intermediate stages.
 - Minimizes error and oversites as solution is developed incrementally.
 
 ### Modular Programming
-This is procedual way of programming that focuses on writting code as functions. It involves breaking down 
+This is procedural way of programming that focuses on writhing code as functions. It involves breaking down large complex programs to smaller, manageable modules/ components which 
+perform single well defined function and minimal interactions.
