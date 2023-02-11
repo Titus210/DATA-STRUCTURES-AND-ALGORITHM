@@ -24,3 +24,4 @@ Data is basic entity for calculation and manipulation progress, t can be single 
 There are two types of data:
    - Numerical: float, integer
    - Alphabet: string
+Representation of particular D.S id called __storage structure__.
