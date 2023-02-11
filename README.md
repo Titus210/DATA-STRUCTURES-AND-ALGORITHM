@@ -25,3 +25,6 @@ There are two types of data:
    - Numerical: float, integer
    - Alphabet: string
 Representation of particular D.S id called __storage structure__.
+Data structure should be represented in a way utilize maximum efficiency. <br/>
+Storage structure represented in auxillary memory is called __file structure__ <br/>
+
