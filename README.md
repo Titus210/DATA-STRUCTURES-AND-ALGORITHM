@@ -47,5 +47,20 @@ through series of intermediate stages.
 - Minimizes error and oversites as solution is developed incrementally.
 
 ### Modular Programming
-This is procedural way of programming that focuses on writhing code as functions. It involves breaking down large complex programs to smaller, manageable modules/ components which 
-perform single well defined function and minimal interactions.
+This is procedural way of programming that focuses on writhing code as functions. <br/> It involves breaking down large complex programs to smaller, manageable modules/ components which 
+perform single well defined function and minimal interactions.<br/>
+Discourages use of control variables and falgs as paramerers which indicates caller function needs to know much about how functionis implemented.<br/>
+Encourage splitting functions to two types:
+1. Master: which controls program flow.
+2. Slave: which handles low level detailed i.e moving data between structures.
+
+#### Features of modular programming
+1. __Abstraction__: Hide detailes expose essential features.
+2. __Encapsulation__: internal implementation of internal data structures is holder from other modules making it flexibe preventing unintended interactions.
+3. __Reusability__: reduce code 
+4. __Separation of Concerns__
+5. __Interfaces__: defines output, inputs and its operations.
+6. __Cohesion__
+7. __Couping__: Minimizes couping making program flexible.
+
+We can implement using top-down and bottom-up.
