@@ -46,3 +46,14 @@ Normal insertion of an element occurs at the end of ann array. <br/>
 ```
 array[length] = element; // Insert element at the end of the array
 ```
+
+## Time complexity
+The time complexity of the insertion operation is O(n), where n is the size of the array. <br/>
+This is because in the worst case scenario, the algorithm has to shift all the elements in the array to the right by one position to create space for the new element.
+
+## Conclusion
+Insertion is a basic operation and is used in arrays in many applications.
+## Author
+The program and description in this folder was written by [Titus Tiplagat](https://www.linkedin.com/in/titus-kiplagat-5146ba210/)
+
+
