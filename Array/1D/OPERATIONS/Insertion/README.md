@@ -54,6 +54,6 @@ This is because in the worst case scenario, the algorithm has to shift all the e
 ## Conclusion
 Insertion is a basic operation and is used in arrays in many applications.
 ## Author
-The program and description in this folder was written by [Titus Tiplagat](https://www.linkedin.com/in/titus-kiplagat-5146ba210/)
+The program and description in this folder was written by [Titus Kiplagat](https://www.linkedin.com/in/titus-kiplagat-5146ba210/)
 
 
