@@ -64,3 +64,5 @@ Encourage splitting functions to two types:
 7. __Couping__: Minimizes couping making program flexible.
 
 We can implement using top-down and bottom-up.
+
+### Top-Down Design
