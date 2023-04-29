@@ -43,3 +43,6 @@ Insertion at the beginning is performed when we set element position to `0`
 ```
 3. Insertion at the end of Array: <br/>
 Normal insertion of an element occurs at the end of ann array. <br/>
+```
+array[length] = element; // Insert element at the end of the array
+```

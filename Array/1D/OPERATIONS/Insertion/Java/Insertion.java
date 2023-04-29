@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-class Insertion{
-
+class Insertion {
 
     /* Method to get the number of students */
     static int getStudentsNumber() {
@@ -11,27 +10,31 @@ class Insertion{
 
         return no_students;
     }
-    
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         // declare array
         int[] students_id = new int[10];
         int no_students = getStudentsNumber();
+        int i;
 
         Scanner input = new Scanner(System.in);
 
-        //check if input is greater than array size
-        if( no_students > students_id.length ){
+        // check if input is greater than array size
+        if (no_students > students_id.length) {
             System.out.println("Number entered is greater than 10");
             getStudentsNumber();
         }
-        
+
         // loop to insert elements into and array
-        for(int i = 1; i <= no_students; i++){
+        for (i = 1; i <= no_students; i++) {
             System.out.println("Enter student " + (i) + " id");
-            students_id[i] = input.nextInt();
+            students_id[i - 1] = input.nextInt();
+        }
+
+        // print students id in the array
+        for (i = 1; i <= no_students; i++) {
+            System.out.println(students_id[i - 1]);
         }
 
     }
-
-
 }
