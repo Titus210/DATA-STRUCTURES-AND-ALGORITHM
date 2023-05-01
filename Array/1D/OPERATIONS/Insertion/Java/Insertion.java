@@ -19,14 +19,22 @@ class Insertion {
             System.out.println("1. Delete some elements in the array\n 2. Quit");
             choice = input.nextInt();
 
-            switch (choice) {
-                case 1:
-                    deleteElements();
-                case 2:
-                    exit();
-            }
+            // switch (choice) {
+            //     case 1:
+            //         deleteElements();
+            //     case 2:
+            //         exit();
+            // }
         }
         return 1;
+    }
+
+    // check if array is full
+    int isArrayFull() {
+        if (students_id.length == 10)
+            return -1;
+        else
+            return 1;
     }
 
     int[] insertAtBeginning() {
@@ -34,8 +42,7 @@ class Insertion {
         if (displayInsertionMessage() == 1) {
             System.out.println("Enter element to insert");
             choice = input.nextInt();
-            System.out.println("Enter position to insert");
-            pos = input.nextInt();
+
             for (i = students_id.length - 1; i == students_id[0]; i--) {
                 students_id[i + 1] = students_id[i];
             }
@@ -44,12 +51,15 @@ class Insertion {
         return students_id;
 
     }
-
+/* 
     int[] insertAtGivenPos() {
         if (displayInsertionMessage() == 1) {
             System.out.println("Enter element to insert");
             choice = input.nextInt();
-            for (i = students_id.length - 1; i == students_id[0]; i--) {
+            System.out.println("Enter position to insert");
+            pos = input.nextInt();
+    
+            for (i = students_id.length - 1; i == pos - 1; i--) {
                 students_id[i + 1] = students_id[i];
             }
             students_id[0] = choice;
@@ -57,12 +67,7 @@ class Insertion {
         return students_id;
     }
 
-    int isArrayFull() {
-        if (students_id.length == 10)
-            return -1;
-        else
-            return 1;
-    }
+
 
     // check if arrays id empty
     int isArrayEmpty() {
@@ -72,8 +77,8 @@ class Insertion {
             return 1;
     }
 
-    /* Delete elements in an array */
-    int deleteElements() {
+ // Delete elements in an array
+     int deleteElements() {
         System.out.println("Enter position to delete ");
         choice = input.nextInt();
 
@@ -84,10 +89,12 @@ class Insertion {
         return 0;
     }
 
+    */ 
+
     public static void main(String[] args) {
-        // declare array
         Insertion instance = new Insertion();
 
+        // get number of students in the array
         int no_students = instance.getStudentsNumber();
 
         // check if input is greater than array size
@@ -110,9 +117,14 @@ class Insertion {
         /*
          * insertion in array
          * insert at begining
+         * insertion at given position
          */
         instance.insertAtBeginning();
-        instance.insertAtGivenPos();
-
+     //   instance.insertAtGivenPos();
+     
+     // print students id in the array
+     for (instance.i = 1; instance.i <= no_students; instance.i++) {
+         System.out.println(instance.students_id[instance.i - 1]);
+     }
     }
 }
