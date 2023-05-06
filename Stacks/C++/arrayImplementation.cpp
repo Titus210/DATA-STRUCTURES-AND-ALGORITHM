@@ -67,7 +67,7 @@ int isFull(int *top){
  * @brief isEmpty function checks if stack is empty by comparing the top element od stack with -1 which is initial value or 
  * top is less than 0 which is obviously a negative number
  * 
- * @param top 
+ * @param top this is the topmost element in the stack
  * @return int -1 if stack is empty and 1 if stack contains som elements
  */
 int isEmpty(int *top){
