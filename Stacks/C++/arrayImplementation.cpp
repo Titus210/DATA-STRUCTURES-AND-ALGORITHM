@@ -17,6 +17,7 @@ int main()
    *
    */
   getOperation(&choice);
+  cout << choice << endl;
 
   switch (choice)
   {
@@ -44,5 +45,35 @@ void getOperation(int *choice)
   cout << "3: Insert an element to the stack: " << endl;
   cout << "4: Remove an element from the stack: " << endl;
   cout << "5: Print all the elements in the stack: " << endl;
-  cin >> choice;
+  cin >> *choice;
+}
+
+/**
+ * @brief it checks if stack is full bu comparing top element with the maximum size of stack -1 since array indexing starts from 0
+ * 
+ * @param top this is the top element of stack
+ * @return int -1 if stack is full and 1 if the stack is not full
+ */
+
+int isFull(int *top){
+
+  if(*top == MAX -1)
+    return -1;
+  return 1;
+
+}
+
+/**
+ * @brief isEmpty function checks if stack is empty by comparing the top element od stack with -1 which is initial value or 
+ * top is less than 0 which is obviously a negative number
+ * 
+ * @param top 
+ * @return int -1 if stack is empty and 1 if stack contains som elements
+ */
+int isEmpty(int *top){
+
+  if(*top == -1 || *top < 0)
+    return -1;
+  return 1;
+
 }
