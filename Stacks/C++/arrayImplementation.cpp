@@ -26,7 +26,7 @@ int main()
   case 2:
     isEmpty(&top);
   case 3:
-    push(stack, &top);
+    push(stack, &top, &data);
   case 4:
     pop(stack, &top, &data);
   case 5:
@@ -76,4 +76,23 @@ int isEmpty(int *top){
     return -1;
   return 1;
 
+}
+
+
+void push(int *stack, int *top, int *data){
+  // check if stack is full
+  if(isFull == -1){
+    cout<<"Sorry we cant insert more elements to the stack " << endl;
+  }
+  cout << "Enter element to insert" << endl;
+  cin >> *data;
+  // increment the top of stack
+  top++;
+  stack[top] == data;
+}
+
+
+
+void pop(int *stack, int *top, int *data){
+  
 }
