@@ -52,6 +52,7 @@ public:
     {
         if (isFull())
             cout << "Queue is full" << endl;
+            
         else
         {
             if (front == -1)
@@ -61,6 +62,28 @@ public:
             cout << element << " has been inserted to position " << rear + 1 << endl;
         }
     }
+
+    int deQueue(){
+        int element;
+        if(isEmpty()){
+            cout << "Queue is empty" << endl;
+            return(-1);
+        }
+        else{
+            element = queue[front];
+            if(front >= rear){
+                front = -1;
+                rear = -1;
+            }
+            else{
+                front++;
+            }
+            cout << "Deleted: " << element << endl;
+            return (element);
+        }
+    }
+
+
 };
 
 int main()
@@ -76,5 +99,12 @@ int main()
     q.enQueue(6);
     q.enQueue(7);
     q.enQueue(8);
+
+    // dequeue
+    for (int i = 0; i < MAX; i++){
+        q.deQueue();
+    }
+    q.deQueue();
+    
     return 0;
 }
