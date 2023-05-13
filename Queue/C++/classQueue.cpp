@@ -44,15 +44,15 @@ public:
         else
             return false;
     }
-/**
- * @brief inserts and element to queue if queue is not empty
- * @param element this is the element to insert to queue
- */
+    /**
+     * @brief inserts and element to queue if queue is not empty
+     * @param element this is the element to insert to queue
+     */
     void enQueue(int element)
     {
         if (isFull())
             cout << "Queue is full" << endl;
-            
+
         else
         {
             if (front == -1)
@@ -61,29 +61,56 @@ public:
             queue[rear] = element;
             cout << element << " has been inserted to position " << rear + 1 << endl;
         }
-    }
+    } /**
+       * @brief Method to remove
+       *
+       * @return removed element
+       */
 
-    int deQueue(){
+    int deQueue()
+    {
         int element;
-        if(isEmpty()){
+        if (isEmpty())
+        {
             cout << "Queue is empty" << endl;
-            return(-1);
+            return (-1);
         }
-        else{
+        else
+        {
             element = queue[front];
-            if(front >= rear){
+            if (front >= rear)
+            {
                 front = -1;
                 rear = -1;
             }
-            else{
+            else
+            {
                 front++;
             }
             cout << "Deleted: " << element << endl;
             return (element);
         }
     }
-
-
+    /**
+     * @brief Display the elements in queue
+     *
+     */
+    void display()
+    {
+        int i;
+        if (isEmpty())
+        {
+            cout << "Empty Queue" << endl;
+        }
+        else
+        {
+            cout << "Front element" << front << endl;
+            cout << "Items in the queue" << endl;
+            for (i = front; i <= rear; i++)
+                cout << queue[i] << endl;
+            cout << "rear element" << rear << endl;
+        }
+    }
 };
 
 int main()
@@ -101,10 +128,14 @@ int main()
     q.enQueue(8);
 
     // dequeue
-    for (int i = 0; i < MAX; i++){
+    for (int i = 0; i < MAX - 5; i++)
+    {
         q.deQueue();
     }
     q.deQueue();
-    
+
+    // print elements in queue
+    q.display();
+
     return 0;
 }
