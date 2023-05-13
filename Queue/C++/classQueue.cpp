@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define MAX ;
+#define MAX 5
 class Queue
 {
 private:
@@ -31,4 +31,22 @@ public:
         else
             return false;
     }
+
+    bool isEmpty()
+    {
+        if (front == -1)
+            return true;
+        else
+            return false;
+    }
+
+
+};
+
+int main()
+{
+    // create an instance of queue/ queue object
+    Queue q;
+
+    return 0;
 }
