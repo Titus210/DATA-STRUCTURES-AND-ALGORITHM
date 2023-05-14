@@ -35,7 +35,7 @@ public:
 
     /**
      * @brief checks if queue is empty
-     * 
+     *
      * @return true if front and rear are on their initial positions
      * @return false  if queue is empty
      */
@@ -45,5 +45,26 @@ public:
             return true;
         else
             return false;
+    }
+
+/**
+ * @brief inserts an element into the queue 
+ * 
+ * @param element: this is the element to insert
+ */
+    void enQueue(int element)
+    {
+        if (isFull())
+        {
+            cout << "The queue is full" << endl;
+        }
+        else
+        {
+            if (front == -1)
+                front = 0;
+            rear = (rear + 1) % MAX_QUEUE_SIZE;
+            queue[rear] = element;
+            cout << element<<" is inserted at position "<< rear + 1 << endl;
+        }
     }
 };
