@@ -67,4 +67,30 @@ public:
             cout << element<<" is inserted at position "<< rear + 1 << endl;
         }
     }
+
+/**
+ * @brief removes an element from the queue
+ * 
+ * @return -1 if queue is empty else return  the element removed
+ */
+    int deQueue(){
+        int element;
+        if(isEmpty()){
+            cout << "No element in the queue" << endl;
+            return -1;
+        }
+        else{
+            element = queue[front]; // the  element in front position of queue is stored in element variable
+            // reset the position to initial values if front is equal to rear
+            if(front == rear){
+                front = -1;
+                rear = 1;
+            } // when queue has one element we reset position after deleting
+            else{
+                front = (front + 1) % MAX_QUEUE_SIZE;
+            }
+            cout << "Deleted: " << element << endl;
+            return element;
+        }
+    }
 };
