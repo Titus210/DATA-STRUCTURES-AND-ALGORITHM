@@ -33,4 +33,17 @@ public:
             return false;
     }
 
+    /**
+     * @brief checks if queue is empty
+     * 
+     * @return true if front and rear are on their initial positions
+     * @return false  if queue is empty
+     */
+    bool isEmpty()
+    {
+        if ((front == -1) && (rear == -1))
+            return true;
+        else
+            return false;
+    }
 };
