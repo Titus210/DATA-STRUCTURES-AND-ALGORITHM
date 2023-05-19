@@ -1,17 +1,16 @@
 #include <stdio.h>
 using namespace std;
 
-
 /**
  * @brief deletion of a node in a linked list
- * 
+ *
  * @param head_ref : head node
  * @param key : key to delete in the node
  */
 void deleteNode(struct Node **head_ref, int key)
 {
-    Struct Node *current = *head_ref;
-    Struct Node *prev = NULL;
+    struct Node *current = *head_ref;
+    struct Node *prev = NULL;
 
     // if the head contains the key
     if (current != NULL && current->data == key)
@@ -22,7 +21,7 @@ void deleteNode(struct Node **head_ref, int key)
     }
 
     // Transverse the linked list to find the node with given key
-    while (current != NULL && current->data != NULL)
+    while (current != NULL && current->data != key)
     {
         prev = current;
         current = current->next;
