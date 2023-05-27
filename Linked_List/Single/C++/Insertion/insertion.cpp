@@ -36,19 +36,6 @@ void beginningInsertion(struct Node **head_ref, int new_data)
     (*head_ref) = new_node;
 }
 
-/**
- * @brief inserts data to the end of the node
- *
- * @param head_ref : head of the new node
- * @param new_data : the data to be inserted at the end
- */
-void beginningInsertion(struct Node **head_ref, int new_data)
-{
-    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
-    new_node->data = new_data;
-    new_node->next = (*head_ref);
-    (*head_ref) = new_node;
-}
 
 /**
  * @brief This is a function to insert code at a given position
