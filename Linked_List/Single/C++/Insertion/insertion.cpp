@@ -111,7 +111,7 @@ int main()
     beginningInsertion(&head, 1);
 
     // end insertion
-    endInsertion(&head, 4);
+    endInserxtion(&head, 4);
 
     // insert at given position
     insertion_at_given_pos(&head, 20, 0); // insert at the beginning
