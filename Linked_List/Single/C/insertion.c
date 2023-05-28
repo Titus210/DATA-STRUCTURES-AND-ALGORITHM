@@ -19,6 +19,30 @@ void print_list(struct Student *head)
         temp = temp->next;
     }
 }
+void delete_student(struct Student **head)
+{
+    // check if head is null
+    if (*head == NULL)
+    {
+        printf("\nNo element to delete");
+        return;
+    }
+    // if head has one element
+    if ((*head)->next == NULL)
+    {
+        free(*head);
+        *head = NULL;
+        return;
+    }
+    // traverse to second last element
+    struct Student *temp = *head;
+    while (temp->next->next != NULL)
+    {
+        temp = temp->next;
+    }
+    free(temp->next);
+    temp->next = NULL;
+}
 
 void insertion(struct Student **head)
 {
@@ -75,6 +99,9 @@ int main()
     } while (choice == 'y' || choice == 'Y');
 
     printf("\nList of students:\n");
+    print_list(head);
+
+    delete_student(&head);
     print_list(head);
 
     return 0;
