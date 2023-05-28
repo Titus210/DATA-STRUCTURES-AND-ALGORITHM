@@ -84,6 +84,26 @@ void insertion(struct Student **head)
     }
 }
 
+void search_student(struct Student **head)
+{
+    struct Student *temp = *head;
+    int id, count = 0;
+    printf("\nEnter id to search: ");
+    scanf("%d", &id);
+    while (temp != NULL)
+    {
+        if (temp->student_id == id) // Use '==' for comparison, not '='
+        {
+            printf("Element found at position %d\n", count + 1);
+            return;
+        }
+        count++;
+        temp = temp->next;
+    }
+    printf("\nElement not found!\n");
+}
+
+
 int main()
 {
     // create head structure
@@ -101,7 +121,7 @@ int main()
     printf("\nList of students:\n");
     print_list(head);
 
-    delete_student(&head);
+    search_student(&head);
     print_list(head);
 
     return 0;
