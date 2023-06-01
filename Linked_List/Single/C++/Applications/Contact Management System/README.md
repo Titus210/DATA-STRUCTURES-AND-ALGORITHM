@@ -101,12 +101,13 @@ Here are the algorithms for each function in the Contact Book Application:
 ### Time complexities
 
 Here is a table showing the time and space complexities of each operation in the Contact Book Application:
-| Opeartion | Time Complexity | Space Complexity |
-|-----|-----|
-| Adding contact | 0(1) | 0(1) |
-| Deleting contact | 0(n) | 0(1) |
-| Searching for contact | 0(n) | 0(1) |
-| Display Contacts | 0(n) | 0(1) |
+
+| Operation              | Time Complexity | Space Complexity |
+|------------------------|-----------------|------------------|
+| Adding contact         | O(1)            | O(1)             |
+| Deleting contact       | O(n)            | O(1)             |
+| Searching for contact  | O(n)            | O(1)             |
+| Displaying Contacts    | O(n)            | O(1)             |
 
 ## Conclusion
 
