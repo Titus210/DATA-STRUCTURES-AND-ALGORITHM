@@ -85,14 +85,235 @@ void add_contact(Contact **head_ref)
     cout << "Contact added successfully" << endl;
 }
 
+void delete_name(Contact **head_ref, string *name_delete)
+{
+    // check if name is in front of the list
+    if ((*head_ref)->name == *name_delete)
+    {
+        Contact *temp = *head_ref;
+        *head_ref = (*head_ref)->next;
+        delete temp;
+        return;
+    }
+    // loop till the last element to check if item is in list
+    Contact *temp = *head_ref;
+    while (temp->next != NULL)
+    {
+        if (temp->next->name == *name_delete)
+        {
+            Contact *temp2 = temp->next;
+            temp->next = temp->next->next;
+            delete temp2;
+            return;
+        }
+        temp = temp->next;
+    }
+}
+
+void delete_phone(Contact **head_ref, int *phone_no_delete)
+{
+    if ((*head_ref)->phone == *phone_no_delete)
+    {
+        Contact *temp = *head_ref;
+        *head_ref = (*head_ref)->next;
+        delete temp;
+        return;
+    }
+    Contact *temp = *head_ref;
+    while (temp->next != NULL)
+    {
+        if (temp->next->phone == *phone_no_delete)
+        {
+            Contact *temp2 = temp->next;
+            temp->next = temp->next->next;
+            delete temp2;
+            return;
+        }
+        temp = temp->next;
+    }
+}
+
+void delete_email(Contact **head_ref, string *email_delete)
+{
+    if ((*head_ref)->email == *email_delete)
+    {
+        Contact *temp = *head_ref;
+        *head_ref = (*head_ref)->next;
+        delete temp;
+        return;
+    }
+    Contact *temp = *head_ref;
+    while (temp->next != NULL)
+    {
+        if (temp->next->email == *email_delete)
+        {
+            Contact *temp2 = temp->next;
+            temp->next = temp->next->next;
+            delete temp2;
+            return;
+        }
+        temp = temp->next;
+    }
+}
+
 void delete_contact(Contact **head_ref)
 {
-    cout << "Deleting contact" << endl;
+    int choice = 0; // Initialize the choice variable
+
+    // get what option to delete
+    cout << "What do you want to delete?" << endl;
+    do
+    {
+        cout << "1. Phone number" << endl;
+        cout << "2. Email" << endl;
+        cout << "3. Address" << endl;
+        cin >> choice;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore remaining characters in input buffer
+    } while (choice < 1 || choice > 3);
+
+    string searchValue;
+    bool found = false;
+
+    switch (choice)
+    {
+    case 1:
+        cout << "Enter phone number to delete: ";
+        getline(cin, searchValue);
+        break;
+    case 2:
+        cout << "Enter email to delete: ";
+        getline(cin, searchValue);
+        break;
+    case 3:
+        cout << "Enter address to delete: ";
+        getline(cin, searchValue);
+        break;
+    default:
+        cout << "Invalid choice" << endl;
+        return;
+    }
+
+    Contact *current = *head_ref;
+    int position = 1;
+
+    while (current != nullptr)
+    {
+        if (choice == 1 && to_string(current->phone) == searchValue)
+        {
+            found = true;
+            break;
+        }
+        else if (choice == 2 && current->email == searchValue)
+        {
+            found = true;
+            break;
+        }
+        else if (choice == 3 && current->address == searchValue)
+        {
+            found = true;
+            break;
+        }
+        current = current->next;
+        position++;
+    }
+
+    if (found)
+    {
+        switch (choice)
+        {
+        case 1:
+            delete_phone(head_ref, &(current->phone));
+            break;
+        case 2:
+            delete_email(head_ref, &(current->email));
+            break;
+        case 3:
+            delete_name(head_ref, &(current->name));
+            break;
+        default:
+            break;
+        }
+        cout << "Contact deleted successfully" << endl;
+    }
+    else
+    {
+        cout << "Contact not found" << endl;
+    }
 }
 
 void search_contact(Contact **head_ref)
 {
-    cout << "Searching contact" << endl;
+    int choice = 0; // Initialize the choice variable
+
+    // get what option to search
+    cout << "What do you want to search?" << endl;
+    do
+    {
+        cout << "1. Phone number" << endl;
+        cout << "2. Email" << endl;
+        cout << "3. Address" << endl;
+        cin >> choice;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore remaining characters in input buffer
+    } while (choice < 1 || choice > 3);
+
+    string searchValue;
+    bool found = false;
+
+    switch (choice)
+    {
+    case 1:
+        cout << "Enter phone number to search: ";
+        getline(cin, searchValue);
+        break;
+    case 2:
+        cout << "Enter email to search: ";
+        getline(cin, searchValue);
+        break;
+    case 3:
+        cout << "Enter address to search: ";
+        getline(cin, searchValue);
+        break;
+    default:
+        cout << "Invalid choice" << endl;
+        return;
+    }
+
+    Contact *current = *head_ref;
+    int position = 1;
+
+    while (current != nullptr)
+    {
+        if (choice == 1 && to_string(current->phone) == searchValue)
+        {
+            found = true;
+            break;
+        }
+        else if (choice == 2 && current->email == searchValue)
+        {
+            found = true;
+            break;
+        }
+        else if (choice == 3 && current->address == searchValue)
+        {
+            found = true;
+            break;
+        }
+        current = current->next;
+        position++;
+    }
+
+    if (found)
+    {
+        cout << "Contact found at position " << position << ":" << endl;
+        cout << "Name: " << current->name << endl;
+        cout << "Phone: " << current->phone << endl;
+        cout << "Email: " << current->email << endl;
+        cout << "Address: " << current->address << endl;
+    }
+    else
+    {
+        cout << "Contact not found" << endl;
+    }
 }
 
 void display_contact(Contact **head_ref)
@@ -130,7 +351,7 @@ int menu()
 
 void prompt(int choice)
 {
-   static Contact* head = nullptr;
+    static Contact *head = nullptr;
 
     // Prompt functions
     switch (choice)
