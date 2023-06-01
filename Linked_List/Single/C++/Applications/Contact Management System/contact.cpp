@@ -14,6 +14,11 @@ struct Contact
     Contact *next;
 };
 
+/**
+ * @brief this function adds contact to the linked llist
+ * 
+ * @param head_ref 
+ */
 void add_contact(Contact **head_ref)
 {
     regex name_regex("^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$");
