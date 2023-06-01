@@ -114,6 +114,6 @@ Here is a table showing the time and space complexities of each operation in the
 The Contact Book Application provides a convenient way to manage contact information. It allows users to add, delete, search for, and display contacts efficiently. By using a linked list data structure and appropriate algorithms, the application ensures optimal performance for contact operations.
 
 ## Author
-Incase of any questions, feel free to reach out to me via the following platforms:
+In case of any questions, feel free to reach out to me via the following platforms:
 [Email](mailto:tituskiplagat50@gmail.com)
 [Titus Kiplagat](https://www.linkedin.com/in/titus-kiplagat-5146ba210/)
